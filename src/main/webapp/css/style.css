@@ -1,12 +1,12 @@
 :root {
-    --primary: #e4572e;
+    --primary: #7C3AED;
     --primary-dark: #c7431f;
-    --dark: #1f2430;
-    --gray: #6b7280;
+    --dark: #0B1020;
+    --gray: #94A3B8;
     --light: #f6f7f9;
-    --border: #e5e7eb;
-    --green: #16a34a;
-    --red: #dc2626;
+    --border: #26324A;
+    --green: #22C55E;
+    --red: #EF4444;
     --radius: 10px;
     --shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
@@ -568,3 +568,95 @@ tr:last-child td {
         align-items: stretch;
     }
 }
+
+
+/* ============================================================
+   DhatchinaMart - Midnight Marketplace Theme
+   Visual theme only. No application logic is changed.
+   ============================================================ */
+:root {
+    --dm-primary: #7C3AED;
+    --dm-primary-hover: #8B5CF6;
+    --dm-bg: #0B1020;
+    --dm-surface: #111827;
+    --dm-surface-2: #172033;
+    --dm-accent: #F97316;
+    --dm-accent-hover: #FB923C;
+    --dm-text: #F8FAFC;
+    --dm-muted: #94A3B8;
+    --dm-border: #26324A;
+    --dm-success: #22C55E;
+    --dm-danger: #EF4444;
+    --dm-warning: #F59E0B;
+}
+
+/* Preserve readable light content areas while giving the app a stronger identity. */
+body {
+    background: var(--dm-bg);
+    color: var(--dm-text);
+}
+
+header, .navbar, nav {
+    background: var(--dm-bg);
+    border-color: var(--dm-border);
+}
+
+.card, .product-card, .form-card, .panel, .modal-content,
+.cart-card, .order-card, .dashboard-card, .auth-card {
+    border-color: var(--dm-border);
+}
+
+button, .btn, .btn-primary, .primary-btn,
+input[type="submit"], input[type="button"] {
+    transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+
+.btn-primary, .primary-btn, input[type="submit"] {
+    background: linear-gradient(135deg, var(--dm-primary), var(--dm-primary-hover));
+    border-color: transparent;
+    color: #fff;
+}
+
+.btn-primary:hover, .primary-btn:hover, input[type="submit"]:hover {
+    box-shadow: 0 8px 24px rgba(124, 58, 237, .28);
+    transform: translateY(-1px);
+}
+
+.btn-accent, .checkout-btn, .add-to-cart, .cart-action {
+    background: linear-gradient(135deg, var(--dm-accent), var(--dm-accent-hover));
+    border-color: transparent;
+    color: #fff;
+}
+
+.btn-accent:hover, .checkout-btn:hover, .add-to-cart:hover, .cart-action:hover {
+    box-shadow: 0 8px 24px rgba(249, 115, 22, .24);
+    transform: translateY(-1px);
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--dm-primary) !important;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, .16) !important;
+    outline: none;
+}
+
+.product-card, .card {
+    transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.product-card:hover, .card:hover {
+    border-color: rgba(124, 58, 237, .55);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, .22);
+    transform: translateY(-3px);
+}
+
+a:hover {
+    color: var(--dm-primary-hover);
+}
+
+.success, .alert-success { color: var(--dm-success); }
+.error, .alert-error, .alert-danger { color: var(--dm-danger); }
+.warning, .alert-warning { color: var(--dm-warning); }
+
+/* ============================================================
+   End DhatchinaMart theme
+   ============================================================ */
